@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacion"
+    app:startDestination="@id/constituirPlazo">
+
+    <fragment
+        android:id="@+id/constituirPlazo"
+        android:name="com.jaime_urresti.bancoutn.ConstituirPlazo"
+        android:label="fragment_constituir_plazo"
+        tools:layout="@layout/fragment_constituir_plazo" >
+        <action
+            android:id="@+id/action_constituirPlazo_to_simularPlazo"
+            app:destination="@id/simularPlazo" />
+    </fragment>
+    <fragment
+        android:id="@+id/simularPlazo"
+        android:name="com.jaime_urresti.bancoutn.SimularPlazo"
+        android:label="SimularPlazo" >
+        <action
+            android:id="@+id/action_simularPlazo_to_constituirPlazo"
+            app:destination="@id/constituirPlazo" />
+    </fragment>
+</navigation>
